@@ -30,6 +30,10 @@ div ng-app="myApp"
             | {{ x.Country }}
 
   div id='buttonGroups'
+    button id="test"
+      |test
+
+
 
 template id='buttonTemplate'
   span
@@ -40,6 +44,7 @@ template id='buttonTemplate'
 
 coffee:
   i = 1
+  $('#test').on("click",()->alert('test'))
   $('#addTemplate').on('click',()->
     $('#buttonGroups').append($('#buttonTemplate').html())
     i += 1
