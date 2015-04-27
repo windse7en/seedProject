@@ -14,3 +14,6 @@ div class="row border-bottom"
           == button_to "Edit", edit_user_registration_path, :method => :get, :class => "form-control", :style => "border:0"
         li
           == button_to "Log out", destroy_user_session_path, :method => :delete, :class => "form-control", :style => "border:0"
+
+= render "layouts/config_box"
+= javascript_include_tag "config_box.js", "chartjs/Chart.min.js"
